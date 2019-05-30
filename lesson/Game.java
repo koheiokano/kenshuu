@@ -1,6 +1,33 @@
-package jp.co.tafs.lesson;
+package jp.co.tafs.lesson; //パッケージの指定
 
 public class Game { //Gameというクラスの作成
+	//↓属性
+	private String gameMachineName = "PS4"; //ゲーム機の名前
+	private String gameMaker = "SONY"; //メーカーの名前
+	private boolean gameNet = true; //ネット接続環境有無（有はtrue、無はfalse)
+	private String gameRelease = "2013/11/15"; //発売日 Dateを使いたい
+	private int gamePrice = 41979; //価格
+
+	//メソッド作成
+	public String getMachineName() {
+		return gameMachineName; //gameMachineNameをgetMachineNameメソッドに
+	}
+
+	public String getMaker() {
+		return gameMaker; //gameMakerをgetMakerメソッドに
+	}
+
+	public boolean getNet() {
+		return gameNet; //gameNetをgetNetメソッドに
+	}
+
+	public String getRelease() {
+		return gameRelease; //gameReleaseをgetReleaseメソッドに
+	}
+
+	public int getPrice() {
+		return gamePrice; //gamePriceをgetPriceメソッドに
+	}
 
 	String gamesoft;
 
@@ -8,7 +35,6 @@ public class Game { //Gameというクラスの作成
 		System.out.println("ゲームで遊んでいます。"); //playGameの中身
 	}
 
-	//メソッド追加
 	void onPower() {
 		String Power = "on"; //電源をONにする
 		System.out.println("電源をONにしました。");
@@ -20,7 +46,7 @@ public class Game { //Gameというクラスの作成
 	}
 
 	void inGame(String gamesoft) { //gamesoftの引数をStringで指定
-		gamesoft = "ダークソウル";
+		gamesoft = "デモンズソウル";
 		System.out.println(gamesoft + "が挿入されました。"); //ゲームソフトを入れる
 	}
 
@@ -39,36 +65,6 @@ public class Game { //Gameというクラスの作成
 	}
 
 	void Impression() {
-		System.out.println("感想を入力してください。");
+		System.out.println("感想:難しい");
 	}
-}
-
-class SuperGameMachine { //SuperGameMachineというクラス（ゲーム機クラス）の作成（publicは1ソースファイルに一つだけ）
-	//↓属性の追加
-	private String gameMachine = "PS4"; //ゲーム機の名前
-	private String gameMaker = "SONY"; //メーカーの名前
-	private String gameNet = "有り"; //ネット接続環境有無
-	private String gameRelease = "2013/11/15"; //発売日
-	private int gamePrice = 41979; //価格
-
-	public String getMachine() {
-		return gameMachine;
-	}
-
-	public String getMaker() {
-		return gameMaker;
-	}
-
-	public String getNet() {
-		return gameNet;
-	}
-
-	public String getRelease() {
-		return gameRelease;
-	}
-
-	public int getPrice() {
-		return gamePrice;
-	}
-
 }
