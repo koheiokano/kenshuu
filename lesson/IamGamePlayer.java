@@ -3,7 +3,7 @@ package jp.co.tafs.lesson;
 public class IamGamePlayer {
 	public static void main(String[] args) {
 
-		String gamesoft; //型
+		String gamesoft; //型ああああ
 
 		String gameMachine = new SuperGameMachine().getMachine(); //privateの中のものを呼び出す
 		System.out.println(gameMachine);
