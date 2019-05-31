@@ -45,10 +45,10 @@ public class Game { //Gameというクラスの作成
 		System.out.println("電源をOFFにしました。");
 	}
 
-	//	void inGame(String gamesoft) { //gamesoftの引数をStringで指定
-	//		gamesoft = "デモンズソウル";	//ゲームソフトを入れる
-	//		System.out.println(gamesoft + "が挿入されました。");
-	//	}
+	void inGame(String gamesoft) { //gamesoftの引数をStringで指定
+		gamesoft = "デモンズソウル"; //ゲームソフトを入れる
+		System.out.println(gamesoft + "が挿入されました。");
+	}
 
 	void outGame() {
 		gamesoft = null; //ゲームソフトを取り出す

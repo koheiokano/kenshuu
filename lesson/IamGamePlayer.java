@@ -2,8 +2,8 @@ package jp.co.tafs.lesson;
 
 public class IamGamePlayer {
 	public static void main(String[] args) {
-
-		Game GameInstance = new Game(); //GameInstanceにインスタンス化
+		ExGame ExGameInstance = new ExGame();				//ExGameインスタンス化
+		Game GameInstance = new Game(); 					//GameInstanceにインスタンス化
 
 		String gameMachine = GameInstance.getMachineName(); //privateの中のものを呼び出す
 		System.out.println("ハード名:" + gameMachine);
@@ -17,36 +17,41 @@ public class IamGamePlayer {
 		String gameRelease = GameInstance.getRelease();
 		System.out.println("発売予定日:" + gameRelease);
 
-		int gamePrice = new Game().getPrice();
+		int gamePrice = GameInstance.getPrice();
 		System.out.println("価格:" + gamePrice);
 
 		System.out.println("\nゲームで遊びましょう！");
 
 		boolean Power;
-		Power = new Game().isPower();
+		Power = GameInstance.isPower();
 		if (Power == false) {
 			System.out.println("電源をONにしましょう。");
-			new Game().onPower();
+			GameInstance.onPower();
 		} else {
 			System.out.println("既に電源はONです。");
 		}
 
 		String gamesoft;
 
-		gamesoft = new Game().activeSoftCheck();//アクティブなゲームソフトを確認し、gamesoftに代入
-		if (gamesoft == null) { //ゲームソフトが入ってない場合
-			new ExGame().inGame(); //ゲームソフトを入れるメソッドを呼び出す
-		} else { //ゲームソフトが入っている場合
-			System.out.println("既にゲームソフトが入っています。");
+		gamesoft = ExGameInstance.activeSoftCheck();	//アクティブなゲームソフトを確認
+		
+		if (gamesoft == null) { 					//ゲームソフトが入ってない場合
+			ExGameInstance.inGame(); 				//ゲームソフトを入れる
+		} 
+		else { 										//ゲームソフトが入っている場合
+			System.out.println("容量がいっぱいです。");
 		}
 
-		new Game().playGame(); //Gameクラスをインスタンス化してplayGameを呼び出す
+		ExGameInstance.ViewGame(); 					//インストールしたゲームの一覧表示
+
+		ExGameInstance.ChoiceGame(); 				//ゲームを選ぶ
+
+		GameInstance.playGame(); 					//ゲームで遊ぶ
 		System.out.println("遊び終えました。");
 
-		new Game().outGame(); //ゲームソフトを取り出す
+		ExGameInstance.outGame(); 					//ゲームソフトを取り出す
 
-		new Game().offPower(); //電源を切る
-		//感想を出力
+		GameInstance.offPower(); 					//電源を切る
 
 	}
 }
