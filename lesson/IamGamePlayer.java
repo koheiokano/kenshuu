@@ -6,19 +6,19 @@ public class IamGamePlayer {
 		Game GameInstance = new Game(); //GameInstanceにインスタンス化
 
 		String gameMachine = GameInstance.getMachineName(); //privateの中のものを呼び出す
-		System.out.println(gameMachine);
+		System.out.println("ハード名:" + gameMachine);
 
 		String gameMaker = GameInstance.getMaker();
-		System.out.println(gameMaker);
+		System.out.println("メーカー:" + gameMaker);
 
 		boolean gameNet = GameInstance.getNet();
-		System.out.println(gameNet);
+		System.out.println("ネット環境:" + gameNet);
 
 		String gameRelease = GameInstance.getRelease();
-		System.out.println(gameRelease);
+		System.out.println("発売予定日:" + gameRelease);
 
 		int gamePrice = new Game().getPrice();
-		System.out.println(gamePrice);
+		System.out.println("価格:" + gamePrice);
 
 		System.out.println("\nゲームで遊びましょう！");
 

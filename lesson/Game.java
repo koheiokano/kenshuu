@@ -2,11 +2,11 @@ package jp.co.tafs.lesson; //パッケージの指定
 
 public class Game { //Gameというクラスの作成
 	//↓属性
-	private String gameMachineName = "PS4"; //ゲーム機の名前
+	private String gameMachineName = "PS46"; //ゲーム機の名前
 	private String gameMaker = "SONY"; //メーカーの名前
 	private boolean gameNet = true; //ネット接続環境有無（有はtrue、無はfalse)
-	private String gameRelease = "2013/11/15"; //発売日 Dateを使いたい
-	private int gamePrice = 41979; //価格
+	private String gameRelease = "2046/2/22"; //発売日 Dateを使いたい
+	private int gamePrice = 46000; //価格
 
 	//メソッド作成
 	public String getMachineName() {
@@ -45,10 +45,10 @@ public class Game { //Gameというクラスの作成
 		System.out.println("電源をOFFにしました。");
 	}
 
-	void inGame(String gamesoft) { //gamesoftの引数をStringで指定
-		gamesoft = "デモンズソウル";
-		System.out.println(gamesoft + "が挿入されました。"); //ゲームソフトを入れる
-	}
+	//	void inGame(String gamesoft) { //gamesoftの引数をStringで指定
+	//		gamesoft = "デモンズソウル";	//ゲームソフトを入れる
+	//		System.out.println(gamesoft + "が挿入されました。");
+	//	}
 
 	void outGame() {
 		gamesoft = null; //ゲームソフトを取り出す
