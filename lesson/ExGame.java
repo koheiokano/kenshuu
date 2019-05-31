@@ -19,8 +19,7 @@ public class ExGame extends Game { //Gameクラスを継承する
 
 		System.out.println("インストール済み一覧\n" + gamesoft); //インストールしたものの一覧を表示
 		Random r = new Random();
-		String PlayGame = gamesoft.get(r.nextInt(5)); //gamesoftから今回遊ぶゲームをランダムで決める
-		System.out.println("今回は" + PlayGame + "で遊びます。");
+		System.out.println("今回は" + gamesoft.get(r.nextInt(5)) + "で遊びます。");
 	}
 
 	void outGame() {
